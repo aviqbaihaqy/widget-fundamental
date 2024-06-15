@@ -48,22 +48,36 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Widget Fundamentals'),
       ),
-      body: const Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+      body: Container(
+        padding:  const EdgeInsets.all(10),
+        child: Row(
           children: [
-            Text("Above Divider"),
-            Divider(),
-            Text("Below Divider"),
-            Divider(
-              thickness: 5,
-              color: Colors.red,
-              indent: 50,
-              endIndent: 50,
-            )
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.redAccent
+                ),
+              ),
+            ),
+            const VerticalDivider(
+              color: Colors.black,
+              thickness: 1,
+              width: 50,
+              indent: 20,
+              endIndent: 20,
+            ),
+            Expanded(
+              child: Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Colors.redAccent
+                ),
+              ),
+            ),
           ],
         ),
-      ),
+      )
     );
   
 }
